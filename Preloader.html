@@ -1,0 +1,166 @@
+<!Doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Preloader</title>
+
+<style>
+
+.preloader{
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  background: #262626;
+
+}
+
+.loader{
+
+  position: absolute;
+
+  top: calc(50% - 50px);
+
+  left: calc(50% - 50px);
+
+  transform: translate (-50%, -50%);
+
+  width: 100px;
+
+  height: 100px;
+
+  border-radius:50%;
+
+  border: 4px solid transparent;
+
+  border-top: 4px solid #fff958;
+
+  border-bottom: 4px solid #b858ff;
+
+  animation: spin 2s linear infinite;
+
+@-webkit-keyframes : spin 2s linear infinite;
+
+}
+
+.loader:before{
+
+  content: '';
+
+  position: absolute;
+
+  top: 10px;
+
+  left: 10px;
+
+  right: 10px;
+
+  bottom: 10px;
+
+  border-radius: 50%;
+
+  border: 4px solid transparent;
+
+  border-top: 4px solid #3ce7d8;
+
+  border-bottom: 4px solid #e74c3c;
+
+  animation: spin 2s linear infinite;
+
+@-webkit-keyframes : spin 2s linear infinite;
+
+}
+
+.loader:after{
+
+  content: '';
+
+  position: absolute;
+
+  top: 24px;
+
+  left: 24px;
+
+  right: 24px;
+
+  bottom: 24px;
+
+  border-radius: 50%;
+
+  border: 4px solid transparent;
+
+  border-top: 4px solid #39ff8d;
+
+  border-bottom: 4px solid #ff67ad;
+
+  animation: spin 2s linear infinite;
+
+@-webkit-keyframes : spin 2s linear infinite;
+
+}
+
+@-webkit-keyframes spin {
+
+  0% { -webkit-transform: rotate(0deg); }
+
+  100% { -webkit-transform: rotate(360deg); }
+
+}
+
+@keyframes spin {
+
+  0% { transform: rotate(0deg); }
+
+  100% { transform: rotate(360deg); }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="preloader">
+
+      <div class="loader">
+
+      </div>
+
+</div>
+
+<center>
+
+<h1>Welcometo my webpage </h1>
+
+<p>Thank you for viewing my webpage</p>
+
+<!-- Scripts -->
+
+<scripts src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.41/jquery.min.js"></script>
+
+<script>
+
+$(window).on('load', function (){
+
+      $('.preloader').fadeOut(1500);
+
+    })
+
+</script>
+
+</body>
+
+</html>
+
